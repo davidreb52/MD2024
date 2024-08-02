@@ -1,0 +1,61 @@
+Python
+    Création de l'environnement
+        Windows
+            py -m venv myenv
+        Linux
+            python -m venv myenv
+
+    Lancement de l'environnement
+
+        Linux:
+            source myenv/bin/activate
+        Windows:
+            myenv\Scripts\activate
+
+    Quitter l'environnement
+        deactivate
+pip freeze > requirements.txt       Création du fichier requirements pour l'instalation sur des dépendances
+pip install -r requirements.txt     Instalation sur des dépendances
+
+Django:
+django-admin startproject mysite    Création d'un projet "mysite" création d'un dossier mysite https://docs.djangoproject.com/fr/5.0/intro/tutorial01/
+python manage.py startapp polls     Création d'une application polls
+
+
+
+py manage.py runserver:         Démarrage du serveur
+py manage.py makemigrations:    Reconfiguration de la BD suivant les fichiers "models.py"
+py manage.py migrate:           Execute la migration de la BD
+py manage.py shell:             Passe en mode console Python
+py manage.py createsuperuser    Création du superuser
+
+Git:
+# Configuration du compte
+git config --global user.name "davidreb52" 
+git config --global user.email davidreb@club-internet.fr
+git config --list               Liste des paramètres
+git remote add origin git@github.com:EtudiantOC/OpenclassroomsProject.git   Création d'un lien SSH entre dépôt local et distant
+git branch -M main              Selection de la branche
+# Mise en couleur
+git config --global color.diff auto
+git config --global color.status auto
+git config --global color.branch auto
+##
+git init                        Initialisation du dépôt dans le répertoire courant
+                                Création d'un dossier .git
+git add index.html styles.css   Indexation / Ajout de fichiers au dépôt
+git add .                       Indexation / Ajout tous les fichier au dépôt
+
+git commit -m “Ajout des fichiers html et css de base”  Création d'une version
+
+git push -u origin main         Transfert du dépôt local vers dépot distant
+
+git branch                      Liste des branches du dépot (* indique la branche active)
+git branch cagnotte             Création d'une branche cagnotte
+git checkout cagnotte           Bascule vers la branche cagnotte
+git merge cagnotte              Depuis la branche principale, fusion de la branche cagnotte
+
+    Fonctionnement classique:
+        Indexation:     git add ...
+        Commit:         git commit ...
+        Push:           git push ...    
