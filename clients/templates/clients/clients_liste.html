@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<h1>Clients</h1>
+<a href="{% url 'clients-create' %}">Créer un nouveau client</a>
+
+<table >
+    <tr>
+        <th></th>
+        <th></th>
+        <th>Code</th>
+        <th>Nom</th>
+        <th>Prénom</th>
+        <th>Rue</th>
+        <th>CP</th>
+        <th>Ville</th>
+        <th>Tel</th>
+        <th>Tel</th>
+        <th>Tel</th>
+    </tr>
+    {% for client in clients %}
+    <tr>
+        <th><a href="{% url 'clients-update' client.id %}"><img src="static 'images/default_profile.png'" alt="Edit"></a></th>
+        <th><a href="{% url 'clients-delete' client.id %}">[Supp]</i></a></th>
+        <th><a href="{% url 'clients-detail' client.id %}">{{ client.CClient }}</a></th>
+        <th>{{ client.Nom }}</th>
+        <th>{{ client.Prenom }}</th>
+        <th>{{ client.Rue_1 }}</th>
+        <th>{{ client.CP }}</th>
+        <th>{{ client.Ville }}</th>
+        <th>{{ client.Telephone }}</th>
+        <th>{{ client.Telephone2 }}</th>
+        <th>{{ client.Portable }}</th>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends 'backOffice/base.html' %}
+
+{% block content %}
+<h1>Supprimer le client</h1>
+
+<p>Etes-vous sûr de vouloir supprimer le client : {{ client.CClient }} ?</p>
+<form action="" method="post">
+    {% csrf_token %}
+    <input type="submit" value="Supprimer">
+</form>
+{% endblock %}

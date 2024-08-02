@@ -1,0 +1,11 @@
+{% extends 'backOffice/base.html' %}
+
+{% block content %}
+<p>Mes groupes préférés sont :</p>
+    <ul>
+            <li>{{ client.CClient}}</li>
+        
+    </ul>
+    <a href="{% url 'clients-list' %}">Retour à tous les clients</a>
+    <a href="{% url 'clients-update' client.id %}">Modifier ce client</a>
+{% endblock %}
